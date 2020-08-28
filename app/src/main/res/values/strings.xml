@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ColorApp</string>
+    <string name="no_clothes">Nothing yet! Try adding some clothes!</string>
+    <string name="outerwear_button">Outerwear</string>
+    <string name="tops_button">Tops</string>
+    <string name="bottoms_button">Bottoms</string>
+    <string name="footwear_button">Footwear</string>
+    <string name="add_new_button">Add New</string>
 </resources>
