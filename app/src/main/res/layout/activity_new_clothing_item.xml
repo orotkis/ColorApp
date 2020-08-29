@@ -4,4 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".newClothingItem"/>
+    tools:context=".newClothingItem">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/season_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:text="TextView" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_marginLeft="76dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/Summer"
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageButton
+                    android:id="@+id/Fall"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:padding="12dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/Winter"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:padding="12dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageButton
+                    android:id="@+id/Spring"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:padding="12dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

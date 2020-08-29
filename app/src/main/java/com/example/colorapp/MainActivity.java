@@ -38,19 +38,19 @@ public class MainActivity extends AppCompatActivity {
                 switch (speedDialActionItem.getId()) {
                     case R.id.fab_add_outerwear:
                         Log.d("Clicked", "Outerwear clicked.");
-                        addNewOnClick("outerwear");
+                        addNewOnClick("Outerwear");
                         return false; // true to keep the Speed Dial open
                     case R.id.fab_add_top:
                         Log.d("Clicked", "Tops clicked.");
-                        addNewOnClick("top");
+                        addNewOnClick("Top");
                         return false;
                     case R.id.fab_add_bottom:
                         Log.d("Clicked", "Bottoms clicked.");
-                        addNewOnClick("bottom");
+                        addNewOnClick("Bottom");
                         return false;
                     case R.id.fab_add_footwear:
                         Log.d("Clicked", "Footwear clicked.");
-                        addNewOnClick("footwear");
+                        addNewOnClick("Footwear");
                         return false;
                     default:
                         return false;

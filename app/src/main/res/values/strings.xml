@@ -8,6 +8,12 @@
     <string name="footwear_button">Footwear</string>
     <string name="add_new_button">Add New</string>
 
+    <!--New Clothing Item Strings-->
+    <string name="summer">Summer</string>
+    <string name="fall">Fall</string>
+    <string name="winter">Winter</string>
+    <string name="spring">Spring</string>
+
     <!-- FAB labels-->
     <string name="fab_outerwear"></string>
     <string name="fab_tops"></string>
