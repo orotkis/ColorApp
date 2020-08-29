@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fab_no_label" type="id" />
+    <item name="fab_add_action" type="id" />
+    <item name="fab_add_outerwear" type="id" />
+    <item name="fab_add_top" type="id" />
+    <item name="fab_add_bottom" type="id" />
+    <item name="fab_add_footwear" type="id" />
+</resources>
