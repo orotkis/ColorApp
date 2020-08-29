@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -25,8 +26,10 @@ public class newClothingItem extends AppCompatActivity {
     private int red = 0;
     private int green = 0;
     private int blue = 0;
+    private String type;
     private Bitmap imageBitmap;
     private Button picButton;
+    private ImageView tee;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final String CAMERA_PERMISSION = "android.hardware.camera";
 
@@ -35,22 +38,31 @@ public class newClothingItem extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_clothing_item);
         picButton = (Button)findViewById(R.id.imageButton);
+        tee = (ImageView)findViewById(R.id.shirtColorView);
         Intent intent = getIntent();
         if(intent.hasExtra("type")){
             String title = "New " + intent.getStringExtra("type");
+            type = intent.getStringExtra("type");
             this.setTitle(title);
+            switch(type){
+                case "Outerwear":
+                    tee.setImageResource(R.drawable.snowflake);
+                    return;
+                case "Bottom":
+                    tee.setImageResource(R.drawable.seat_legroom_extra);
+                    return;
+                case "Footwear":
+                    tee.setImageResource(R.drawable.shoe_formal);
+                    return;
+                case "Top":
+                    return;
+            }
         }
     }
 
-    private void buildOuterwear(){
-
+    public void saveClothingItem(){
+       //TODO: think about how to save clothing objects in mainactivity
     }
-
-    private void buildTop(){}
-
-    private void buildBottom(){}
-
-    private void buildFootwear(){}
 
     public void colorPicker(View v){
         final ColorPicker cp = new ColorPicker(this, red, green, blue);
@@ -76,7 +88,6 @@ public class newClothingItem extends AppCompatActivity {
                 Log.d("#Hex no alpha", String.format("#%06X", (0xFFFFFF & color)));
                 Log.d("#Hex with alpha", String.format("#%08X", (0xFFFFFFFF & color)));
 
-                ImageView tee = (ImageView)findViewById(R.id.shirtColorView);
                 tee.setColorFilter(color);
                 dominantColor = color;
                 // If the auto-dismiss option is not enable (disabled as default) you have to manually dimiss the dialog
